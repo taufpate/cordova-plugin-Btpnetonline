@@ -113,7 +113,9 @@ public class Btpnetonline extends CordovaPlugin {
 	}
 
 void gunesBT(CallbackContext callbackContext) {
-	callbackContext.error("This is my first error message");
+	BluetoothAdapter mBluetoothAdapter = null;
+	mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+	callbackContext.error("hhh"+mBluetoothAdapter+"zzz");
 }
 
     //This will return the array list of paired bluetooth printers
