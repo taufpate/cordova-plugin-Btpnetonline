@@ -7,9 +7,6 @@ var BTPrinter = {
    connect: function(fnSuccess, fnError, name){
       exec(fnSuccess, fnError, "Btpnetonline", "connect", [name]);
    },
-   checkStatus: function(fnSuccess, fnError, name){
-      exec(fnSuccess, fnError, "Btpnetonline", "checkStatus", [name]);
-   },
    disconnect: function(fnSuccess, fnError){
       exec(fnSuccess, fnError, "Btpnetonline", "disconnect", []);
    },
