@@ -32,8 +32,8 @@ import android.graphics.Bitmap.Config;
 import android.util.Xml.Encoding;
 import android.util.Base64;
 
-public class BluetoothPrinter extends CordovaPlugin {
-	private static final String LOG_TAG = "BluetoothPrinter";
+public class Btpnetonline extends CordovaPlugin {
+	private static final String LOG_TAG = "Btpnetonline";
 	BluetoothAdapter mBluetoothAdapter;
 	BluetoothSocket mmSocket;
 	BluetoothDevice mmDevice;
@@ -47,7 +47,7 @@ public class BluetoothPrinter extends CordovaPlugin {
 
 	Bitmap bitmap;
 
-	public BluetoothPrinter() {}
+	public Btpnetonline() {}
 
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
