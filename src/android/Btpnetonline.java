@@ -109,34 +109,7 @@ public class Btpnetonline extends CordovaPlugin {
 		return false;
 	}
 
-	boolean checkStatus(CallbackContext callbackContext) throws IOException {
-		try {
-			// Standard SerialPortService ID
-			UUID uuid = UUID.fromString("00001101-0000-1000-8000-00805f9b34fb");
-			mmSocket = mmDevice.createRfcommSocketToServiceRecord(uuid);
-			mmSocket.ConnectAsync();
-			Thread.Sleep(1000);
-			if (mmSocket.IsConnected)
-			{
-				// call a function here
-				// my function blocks for the application lifetime
-				mmSocket.Close();
-				return true;
-			}
-			else
-			{
-				mmSocket.Close();
-				return false;
-			}			
-		} catch (Exception e) {
-			//String errMsg = e.getMessage();
-			String errMsg = "LONDON BRIDGE IS FALLING DOWN";
-			Log.e(LOG_TAG, errMsg);
-			e.printStackTrace();
-			callbackContext.error(errMsg);
-		}
-		return false;
-	}
+	
 
     //This will return the array list of paired bluetooth printers
 	void listBT(CallbackContext callbackContext) {
@@ -219,7 +192,7 @@ public class Btpnetonline extends CordovaPlugin {
 			mmSocket.connect();
 			mmOutputStream = mmSocket.getOutputStream();
 			mmInputStream = mmSocket.getInputStream();
-			beginListenForData();
+			//beginListenForData();
 			//Log.d(LOG_TAG, "Bluetooth Opened: " + mmDevice.getName());
 			callbackContext.success("Bluetooth Opened: " + mmDevice.getName());
 			return true;
