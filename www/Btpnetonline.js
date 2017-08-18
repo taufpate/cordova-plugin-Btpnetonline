@@ -22,7 +22,7 @@ var BTPrinter = {
    printPOSCommand: function(fnSuccess, fnError, str){
       exec(fnSuccess, fnError, "Btpnetonline", "printPOSCommand", [str]);
    },
-   find: function(fnSuccess, fnError, str){
+   find: function(fnSuccess, fnError){
       exec(fnSucess, fnError, "Btpnetonline", "findBT", []);
    }
 };
