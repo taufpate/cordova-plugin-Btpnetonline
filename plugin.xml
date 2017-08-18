@@ -4,8 +4,8 @@
 <name>Btpnetonline</name>
 
 <js-module name="Btpnetonline" src="www/Btpnetonline.js">
-
-<clobbers target="cordova.plugins.Btpnetonline" /></js-module>
+    <clobbers target="BTPrinter" />
+</js-module>
 
 <platform name="android">
     <config-file parent="/*" target="res/xml/config.xml">
