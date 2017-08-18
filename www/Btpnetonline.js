@@ -23,7 +23,7 @@ var BTPrinter = {
       exec(fnSuccess, fnError, "Btpnetonline", "printPOSCommand", [str]);
    },
    gunes: function(fnSuccess, fnError){
-      exec(fnSucess, fnError, "Btpnetonline", "gunes", []);
+      exec(fnSuccess, fnError, "Btpnetonline", "gunes", []);
    }
 };
 
