@@ -11,14 +11,14 @@
     <config-file parent="/*" target="res/xml/config.xml">
 
     <feature name="Btpnetonline">
-        <param name="android-package" value="cordova-plugin-Btpnetonline.Btpnetonline" /></feature>
+        <param name="android-package" value="cordova.plugin.Btpnetonline.Btpnetonline" /></feature>
     </config-file>
     
       <config-file target="AndroidManifest.xml" parent="/*">
          <uses-permission android:name="android.permission.BLUETOOTH" />
       </config-file>
     
-    <source-file src="src/android/Btpnetonline.java" target-dir="src/cordova-plugin-Btpnetonline/Btpnetonline" />
+    <source-file src="src/android/Btpnetonline.java" target-dir="src/cordova/plugin/Btpnetonline/Btpnetonline" />
 </platform>
 
 </plugin>
