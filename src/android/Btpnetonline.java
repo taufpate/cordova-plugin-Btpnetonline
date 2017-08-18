@@ -113,7 +113,7 @@ public class Btpnetonline extends CordovaPlugin {
 	}
 
 void gunesBT(CallbackContext callbackContext) {
-	errMsg="This is my first error message";
+	String errMsg="This is my first error message";
 	callbackContext.error(errMsg);
 	return;
 }
