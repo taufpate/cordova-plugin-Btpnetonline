@@ -1,4 +1,5 @@
-package cordova-plugin-Btpnetonline;
+//package cordova-plugin-Btpnetonline;
+package com.ru.cordova.printer.bluetooth;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
