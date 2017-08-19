@@ -117,7 +117,7 @@ void gunesBT(CallbackContext callbackContext) {
 	mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 	
 	//String action = "";
-	Intent intent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+	Intent intent = new Intent();
 	String action = intent.getAction();
 	
 	callbackContext.error(".:action:."+action+".:hhh:."+mBluetoothAdapter+".:zzz:.");
