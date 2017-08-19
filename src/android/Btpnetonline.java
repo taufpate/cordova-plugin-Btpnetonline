@@ -55,7 +55,7 @@ public class Btpnetonline extends CordovaPlugin {
 			listBT(callbackContext);
 			return true;
 		} else if (action.equals("gunes")) {
-			gunesBT(callbackContext);
+			//gunesBT(callbackContext);
 			return true;
 		} else if (action.equals("connect")) {
 			String name = args.getString(0);
