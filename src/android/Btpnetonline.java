@@ -113,10 +113,11 @@ public class Btpnetonline extends CordovaPlugin {
 	}
 
 void gunesBT(CallbackContext callbackContext) {
-	BluetoothAdapter mBluetoothAdapter = null;
-	mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+
 	
-	String macAndName=mBluetoothAdapter.getAdress()+":"+mBluetoothAdapter.getName();
+BluetoothAdapter adapter=BluetoothAdapter.getDefaultAdapter();
+String macAndName=adapter.getAdress()+":"+adapter.getName();
+	
 	
 	//String action = "";
 	Intent intent = new Intent();
