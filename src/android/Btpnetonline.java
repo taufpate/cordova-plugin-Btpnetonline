@@ -50,12 +50,12 @@ public class Btpnetonline extends CordovaPlugin {
 	public Btpnetonline() {}
 
 	@Override
-	public boolean execute(String action, JSONArray args, CallbackContext callbackContext, Intent intent) throws JSONException {
+	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 		if (action.equals("list")) {
 			listBT(callbackContext);
 			return true;
 		} else if (action.equals("gunes")) {
-			gunesBT(callbackContext,intent);
+			gunesBT(callbackContext);
 			return true;
 		} else if (action.equals("connect")) {
 			String name = args.getString(0);
@@ -112,7 +112,7 @@ public class Btpnetonline extends CordovaPlugin {
 		return false;
 	}
 
-void gunesBT(CallbackContext callbackContext, Intent intent) {
+void gunesBT(CallbackContext callbackContext) {
 
 	
 	String action = intent.getAction();//BluetoothAdapter.ACTION_REQUEST_ENABLE
