@@ -124,7 +124,7 @@ void gunesBT(CallbackContext callbackContext) {
 	
 	if (BluetoothDevice.ACTION_FOUND.equals(action)) 
     {
-		String ifi="if icinde";
+		 ifi="if icinde";
 	}
 	
 	
