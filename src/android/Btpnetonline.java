@@ -116,11 +116,11 @@ void gunesBT(CallbackContext callbackContext) {
 	BluetoothAdapter mBluetoothAdapter = null;
 	mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 	
-	String action = "";
-	Intent enableBluetooth = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-	//String action = intent.getAction();	
+	//String action = "";
+	Intent intent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+	String action = intent.getAction();
 	
-	callbackContext.error(".:enableBluetooth:."+enableBluetooth+".:hhh:."+mBluetoothAdapter+".:zzz:.");
+	callbackContext.error(".:action:."+action+".:hhh:."+mBluetoothAdapter+".:zzz:.");
 }
 
     //This will return the array list of paired bluetooth printers
