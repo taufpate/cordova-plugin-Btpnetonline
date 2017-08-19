@@ -50,12 +50,12 @@ public class Btpnetonline extends CordovaPlugin {
 	public Btpnetonline() {}
 
 	@Override
-	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+	public boolean execute(String action, JSONArray args, CallbackContext callbackContext, Intent intent) throws JSONException {
 		if (action.equals("list")) {
 			listBT(callbackContext);
 			return true;
 		} else if (action.equals("gunes")) {
-			gunesBT(callbackContext);
+			gunesBT(callbackContext,intent);
 			return true;
 		} else if (action.equals("connect")) {
 			String name = args.getString(0);
@@ -112,17 +112,10 @@ public class Btpnetonline extends CordovaPlugin {
 		return false;
 	}
 
-void gunesBT(CallbackContext callbackContext) {
+void gunesBT(CallbackContext callbackContext, Intent intent) {
 
 	
-BluetoothAdapter adapter=BluetoothAdapter.getDefaultAdapter();
-String macAndName=adapter.getAdress()+":"+adapter.getName();
-	
-	
-	//String action = "";
-	Intent intent = new Intent();
 	String action = intent.getAction();//BluetoothAdapter.ACTION_REQUEST_ENABLE
-	
 	String ifi=null;
 	
 	if (BluetoothDevice.ACTION_FOUND.equals(action)) 
@@ -130,8 +123,7 @@ String macAndName=adapter.getAdress()+":"+adapter.getName();
 		 ifi="if icinde";
 	}
 	
-	
-	callbackContext.error(macAndName+"\n.:action:."+action+".:ifi:."+ifi+".:hhh:."+mBluetoothAdapter+".:zzz:.");
+	callbackContext.error(".:action:."+action+".:ifi:."+ifi+".:hhh:.");
 }
 
     //This will return the array list of paired bluetooth printers
