@@ -55,7 +55,7 @@ public class Btpnetonline extends CordovaPlugin {
 			listBT(callbackContext);
 			return true;
 		} else if (action.equals("gunes")) {
-			gunesBT(callbackContext,intent);
+			gunesBT(callbackContext);
 			return true;
 		} else if (action.equals("connect")) {
 			String name = args.getString(0);
@@ -112,13 +112,15 @@ public class Btpnetonline extends CordovaPlugin {
 		return false;
 	}
 
-void gunesBT(CallbackContext callbackContext, Intent intent) {
+void gunesBT(CallbackContext callbackContext) {
 	BluetoothAdapter mBluetoothAdapter = null;
 	mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 	
-	String action = intent.getAction();	
+	String action = "";
+	Intent enableBluetooth = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+	//String action = intent.getAction();	
 	
-	callbackContext.error(".:action:."+action+".:hhh:."+mBluetoothAdapter+".:zzz:.");
+	callbackContext.error(".:enableBluetooth:."+enableBluetooth+".:hhh:."+mBluetoothAdapter+".:zzz:.");
 }
 
     //This will return the array list of paired bluetooth printers
@@ -202,7 +204,7 @@ void gunesBT(CallbackContext callbackContext, Intent intent) {
 			mmSocket.connect();
 			mmOutputStream = mmSocket.getOutputStream();
 			mmInputStream = mmSocket.getInputStream();
-			//beginListenForData();
+			beginListenForData();
 			//Log.d(LOG_TAG, "Bluetooth Opened: " + mmDevice.getName());
 			callbackContext.success("Bluetooth Opened: " + mmDevice.getName());
 			return true;
