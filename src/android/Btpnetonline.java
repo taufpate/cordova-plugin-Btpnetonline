@@ -114,16 +114,7 @@ public class Btpnetonline extends CordovaPlugin {
 
 void gunesBT(CallbackContext callbackContext) {
 
-	
-	String action = intent.getAction();//BluetoothAdapter.ACTION_REQUEST_ENABLE
-	String ifi=null;
-	
-	if (BluetoothDevice.ACTION_FOUND.equals(action)) 
-    	{
-		 ifi="if icinde";
-	}
-	
-	callbackContext.error(".:action:."+action+".:ifi:."+ifi+".:hhh:.");
+	//callbackContext.error(".:action:."+action+".:ifi:."+ifi+".:hhh:.");
 }
 
     //This will return the array list of paired bluetooth printers
