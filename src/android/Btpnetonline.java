@@ -290,7 +290,7 @@ public class Btpnetonline extends CordovaPlugin {
             int mWidth = bitmap.getWidth();
             int mHeight = bitmap.getHeight();
 
-            //bitmap = resizeImage(bitmap, 60 * 10, mHeight);
+            bitmap = resizeImage(bitmap, 48 * 8, mHeight);
 
             byte[] bt = decodeBitmap(bitmap);
 
