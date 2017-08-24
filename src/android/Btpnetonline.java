@@ -292,6 +292,9 @@ public class Btpnetonline extends CordovaPlugin {
 
             bitmap = resizeImage(bitmap, 48 * 8, mHeight);
 
+            callbackContext.success("zortingen");
+            
+            
             byte[] bt = decodeBitmap(bitmap);
 
             mmOutputStream.write(bt);
