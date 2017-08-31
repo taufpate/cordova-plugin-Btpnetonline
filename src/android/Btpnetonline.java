@@ -482,7 +482,7 @@ public class Btpnetonline extends CordovaPlugin {
             yHHex = yHHex + "0";
         }
         String heightHexString = yLHex + yHHex;
-        //construct xL and xH
+        //construct END xL and xH, yL and yH
         
         List<String> commandList = new ArrayList<String>();
         commandList.add(commandHexString + widthHexString + heightHexString);
