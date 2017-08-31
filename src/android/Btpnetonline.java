@@ -434,6 +434,7 @@ public class Btpnetonline extends CordovaPlugin {
 
         List<String> bmpHexList = binaryListToHexStringList(list);
         String commandHexString = "1D763000";
+        /*
         String widthHexString = Integer.toHexString(bmpWidth % 8 == 0 ? bmpWidth / 8 : (bmpWidth / 8 + 1));
         if (widthHexString.length() > 2) {
             Log.d(LOG_TAG, "DECODEBITMAP ERROR : width is too large");
@@ -451,7 +452,38 @@ public class Btpnetonline extends CordovaPlugin {
             heightHexString = "0" + heightHexString;
         }
         heightHexString = heightHexString + "00";
+        */
+        
+        //construct xL and xH
+        int xL = bmpWidth % 256;
+        int xH = (bmpWidth - xL) / 256;
 
+        String xLHex = Integer.toHexString(xL);
+        String xHHex = Integer.toHexString(xH);
+        if(xLHex.length() == 1){
+            xLHex = xLHex + "0";
+        }
+        if(xHHex.length() == 1){
+            xHHex = xHHex + "0";
+        }
+        String widthHexString = xLHex + xHHex;
+
+
+        //construct yL and yH
+        int yL = bmpHeight % 256;
+        int yH = (bmpHeight - yL) / 256;
+
+        String yLHex = Integer.toHexString(yL);
+        String yHHex = Integer.toHexString(yH);
+        if(yLHex.length() == 1){
+            yLHex = yLHex + "0";
+        }
+        if(yHHex.length() == 1){
+            yHHex = yHHex + "0";
+        }
+        String heightHexString = yLHex + yHHex;
+        //construct xL and xH
+        
         List<String> commandList = new ArrayList<String>();
         commandList.add(commandHexString + widthHexString + heightHexString);
         commandList.addAll(bmpHexList);
