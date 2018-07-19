@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/taufpate/cordova-plugin-Btpnetonline"
+    "url": "git+https://github.com/taufpate/cordova-plugin-Btpnetonline.git"
   },
   "keywords": [
     "cordova",
